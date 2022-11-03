@@ -3,7 +3,7 @@
     position: fixed;
     left: 0;
     top: 30%;
-    z-index: 100;
+    z-index: 201;
     background-color: black;
     border: 1px solid white;
     height: 300px;
@@ -31,7 +31,8 @@
     width: 150px;
     background-color: #84a9de;
     opacity: 50%;
-    z-index: -100;
+    z-index: -201;
+
 
 }
 
@@ -44,7 +45,8 @@
     width: 180px;
     background-color: #84a9de;
     opacity: 20%;
-    z-index: -100;
+    z-index: -201;
+
 
 }
 
@@ -57,7 +59,8 @@
     width: 250px;
     background-color: #84a9de;
     opacity: 50%;
-    z-index: -100;
+    z-index: -201;
+
 
 }
 
@@ -70,7 +73,8 @@
     width: 150px;
     background-color: #84a9de;
     opacity: 30%;
-    z-index: -100;
+    z-index: -201;
+
 
 }
 
@@ -83,7 +87,8 @@
     width: 200px;
     background-color: #84a9de;
     opacity: 90%;
-    z-index: -100;
+    z-index: -201;
+
 
 }
 
@@ -96,7 +101,8 @@
     width: 200px;
     background-color: #84a9de;
     opacity: 50%;
-    z-index: -100;
+    z-index: -201;
+
 }
 
 .seven {
@@ -108,14 +114,15 @@
     width: 200px;
     background-color: #84a9de;
     opacity: 50%;
-    z-index: -100;
+    z-index: -201;
+
 
 }
 
 body {
     background-color: #3999d5;
     overflow-x: hidden;
-    width: 100%;
+    max-width: 100%;
 }
 
 header {
@@ -272,6 +279,10 @@ fa-times {
 }
 
 @media (max-width:700px) {
+    header .container {
+        gap: 3.5rem;
+    }
+
     header .container .links {
         display: none;
     }
@@ -279,8 +290,8 @@ fa-times {
     #time {
         transform: scale(0);
         top: 80px;
-        left: 360px;
-        font-size: 27px;
+        left: 300px;
+        font-size: 23px;
         z-index: 150;
 
     }
@@ -289,7 +300,7 @@ fa-times {
         transform: scale(1);
         top: 80px;
         left: 32px;
-        font-size: 27px;
+        font-size: 23px;
         z-index: 150;
 
     }
@@ -297,7 +308,7 @@ fa-times {
 
     header .container .links a {
         margin-right: 15px;
-        font-size: 20px;
+        font-size: 16px;
 
     }
 
@@ -308,10 +319,12 @@ fa-times {
         transition: 2s;
         transform: scale(0);
     }
-    header .container h1{
+
+    header .container h1 {
         font-size: 20px;
     }
-    header .container a{
+
+    header .container a {
         font-size: 20px;
     }
 }
@@ -347,6 +360,7 @@ fa-times {
     margin-top: 130px;
     width: 100%;
     position: relative;
+    z-index: -200;
 }
 
 #index .container {
