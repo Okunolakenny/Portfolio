@@ -308,6 +308,12 @@ fa-times {
         transition: 2s;
         transform: scale(0);
     }
+    header .container h1{
+        font-size: 20px;
+    }
+    header .container a{
+        font-size: 20px;
+    }
 }
 
 
