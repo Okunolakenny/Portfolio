@@ -500,6 +500,11 @@ fa-times {
         margin-top: -15px;
 
     }
+
+    #index .container .image {
+        margin: auto;
+        height: 440px;
+    }
 }
 
 @media (max-width:375px) {
