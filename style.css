@@ -315,7 +315,7 @@ fa-times {
     header .container .links {
         display: block;
         top: 115px;
-        left: 40px;
+        left: 10px;
         transition: 2s;
         transform: scale(0);
     }
