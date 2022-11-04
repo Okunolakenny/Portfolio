@@ -7,12 +7,20 @@ html {
 }
 
 .blur {
-    width: 100%;
+    /* width: 100%;
     height: 100vh;
-    background-color: black;
-    position: fixed;
-    z-index: 550;
-    display: none;
+    z-index: 1000;
+    position: fixed; */
+    /* background-color: black; */
+    /* display: none; */
+}
+
+#index.active {
+    /* background-color: black; */
+    filter: blur(10px);
+    user-select: none;
+    pointer-events: none;
+    /* display: block; */
 }
 
 .fixed {
@@ -42,7 +50,7 @@ html {
 .one {
     position: fixed;
     left: -7%;
-    top: 5%;
+    top: -30%;
     border-radius: 50%;
     height: 150px;
     width: 150px;
@@ -56,7 +64,7 @@ html {
 .two {
     position: fixed;
     left: 5%;
-    top: 35%;
+    top: 25%;
     border-radius: 50%;
     height: 180px;
     width: 180px;
@@ -69,8 +77,8 @@ html {
 
 .three {
     position: fixed;
-    left: 15%;
-    top: 60%;
+    left: -10%;
+    bottom: -30%;
     border-radius: 50%;
     height: 250px;
     width: 250px;
@@ -83,8 +91,8 @@ html {
 
 .four {
     position: fixed;
-    right: 10%;
-    top: 5%;
+    right: -6%;
+    top: -30%;
     border-radius: 50%;
     height: 150px;
     width: 150px;
@@ -97,8 +105,8 @@ html {
 
 .five {
     position: fixed;
-    right: 15%;
-    top: 32%;
+    right: 40%;
+    top: 10%;
     border-radius: 50%;
     height: 200px;
     width: 200px;
@@ -111,8 +119,8 @@ html {
 
 .six {
     position: fixed;
-    right: 18%;
-    top: 44%;
+    right: 50%;
+    top: 50%;
     border-radius: 50%;
     height: 200px;
     width: 200px;
@@ -124,8 +132,8 @@ html {
 
 .seven {
     position: fixed;
-    right: 0;
-    bottom: -15%;
+    right: -7%;
+    bottom: -35%;
     border-radius: 50%;
     height: 200px;
     width: 200px;
@@ -156,12 +164,20 @@ header {
     /* padding-bottom:; */
 
 }
-header .h1{
+
+header .h1 {
     font-size: 30px;
     font-weight: bolder;
 }
-header.active{
+
+header.active {
     background-color: #046cef;
+}
+
+header.active-two {
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
 }
 
 header .container {
@@ -257,9 +273,10 @@ header a {
 
 
 @media (max-width:940px) {
-header{
-    padding-bottom: 10px;
-}
+    header {
+        padding-bottom: 10px;
+    }
+
     header .container .links {
         display: none;
     }
@@ -302,9 +319,10 @@ header{
 }
 
 @media (max-width:700px) {
-    header{
+    header {
         padding-bottom: 50px;
     }
+
     header .container {
         gap: 3.5rem;
     }
@@ -384,7 +402,7 @@ header{
     position: fixed;
     left: 30%;
     width: 40%;
-    z-index: 800;
+    z-index: 1200;
     height: 100%;
     /* top: 10%; */
     transform: scale(0);
@@ -406,7 +424,8 @@ header{
     border-radius: 10px;
 
 }
-#cv #download{
+
+#cv #download {
     float: right;
     background-color: #046cef;
     border-radius: 10px;
@@ -419,29 +438,31 @@ header{
 
 
 #cv img {
-margin-top: 10px;
+    margin-top: 10px;
     width: 100%;
     height: 100%;
 }
-@media (max-width:900px){
-    #cv{
-        width: 50%;
+
+@media (max-width:900px) {
+    #cv {
+        width: 70%;
         height: 100%;
         left: 25%;
         top: 0;
     }
 }
 
-@media (max-width:900px){
-    #cv{
+@media (max-width:900px) {
+    #cv {
         width: 60%;
         height: 100%;
         left: 20%;
         top: 0;
     }
 }
-@media (max-width:650px){
-    #cv{
+
+@media (max-width:650px) {
+    #cv {
         width: 90%;
         height: 100%;
         left: 5%;
@@ -449,14 +470,15 @@ margin-top: 10px;
     }
 }
 
-@media (max-width:500px){
-    #cv{
+@media (max-width:500px) {
+    #cv {
         width: 100%;
         height: 100%;
         left: 0;
         top: 0;
     }
 }
+
 #index {
     margin-top: 130px;
     width: 100%;
@@ -579,6 +601,7 @@ margin-top: 10px;
         height: 390px;
         width: 400px;
     }
+
     #index .container .text h2 {
         /* margin-top: 50px; */
     }

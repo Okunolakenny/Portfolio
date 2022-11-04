@@ -9,8 +9,9 @@ var links = document.getElementById('links');
 var mycv = document.getElementById('cv');
 var resume = document.getElementById('resume');
 var closecv = document.getElementById('closecv');
-var blurs = document.getElementsByClassName('blur');
+var blurs = document.querySelector('#index');
 var header = document.querySelector('header');
+
 
 
 
@@ -29,11 +30,15 @@ window.addEventListener('scroll', ()=>{
 })
 resume.onclick = function () {
     mycv.style.transform = "scale(1)";
-    // blurs.style.display = "block";
+    blurs.classList.add('active')
+    header.classList.add('active-two')
 
 }
 closecv.onclick = function () {
     mycv.style.transform = "scale(0)";
+    blurs.classList.remove('active')
+    header.classList.remove('active-two');
+
 }
 
 bar.onclick = function () {
@@ -117,7 +122,7 @@ var swiper = new Swiper('.swiper-container', {
 
 
 AOS.init({
-    offset:200,
-    duration:500
+    offset:300,
+    duration:100
 
 });  
