@@ -10,6 +10,7 @@ var mycv = document.getElementById('cv');
 var resume = document.getElementById('resume');
 var closecv = document.getElementById('closecv');
 var blurs = document.getElementsByClassName('blur');
+var header = document.querySelector('header');
 
 
 
@@ -23,6 +24,9 @@ var blurs = document.getElementsByClassName('blur');
 // window.onload = function(){
 //     home.classList.add('after')
 // }
+window.addEventListener('scroll', ()=>{
+    header.classList.toggle('active', window.scrollY >= 500);
+})
 resume.onclick = function () {
     mycv.style.transform = "scale(1)";
     // blurs.style.display = "block";
@@ -92,7 +96,7 @@ blog.onclick = function () {
 
 
 var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
+    slidesPerView: 2,
     //  slidesPerView: 'auto',
     loop: true,
     spaceBetween: 30,

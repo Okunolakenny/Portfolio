@@ -20,7 +20,7 @@ html {
     position: fixed;
     left: 0;
     top: 30%;
-    z-index: 201;
+    z-index: 700;
     background-color: black;
     border: 1px solid white;
     height: 300px;
@@ -148,11 +148,20 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    /* background-color: #046cef; */
     align-items: center;
-    z-index: 500;
+    z-index: 800;
     justify-content: center;
     color: white;
+    /* padding-bottom:; */
 
+}
+header .h1{
+    font-size: 30px;
+    font-weight: bolder;
+}
+header.active{
+    background-color: #046cef;
 }
 
 header .container {
@@ -248,6 +257,9 @@ header a {
 
 
 @media (max-width:940px) {
+header{
+    padding-bottom: 10px;
+}
     header .container .links {
         display: none;
     }
@@ -290,6 +302,9 @@ header a {
 }
 
 @media (max-width:700px) {
+    header{
+        padding-bottom: 50px;
+    }
     header .container {
         gap: 3.5rem;
     }
@@ -329,7 +344,7 @@ header a {
         transform: scale(0);
     }
 
-    header .container h1 {
+    header .container .h1 {
         font-size: 20px;
     }
 
@@ -367,11 +382,15 @@ header a {
 #cv {
     height: 80vh;
     position: fixed;
-    left: 35%;
-    z-index: 600;
-    top: 10%;
+    left: 30%;
+    width: 40%;
+    z-index: 800;
+    height: 100%;
+    /* top: 10%; */
     transform: scale(0);
+    padding-top: 10px;
     transition: 2s;
+    background-color: white;
 
 }
 
@@ -380,15 +399,64 @@ header a {
     font-size: 20px;
     cursor: pointer;
     color: white;
+    margin-right: 40px;
+    padding: 2px 10px;
+    border: 1px solid;
+    background-color: #046cef;
+    border-radius: 10px;
 
 }
+#cv #download{
+    float: right;
+    background-color: #046cef;
+    border-radius: 10px;
+    margin-right: 20px;
+    color: white;
+    font-weight: bolder;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
 
 #cv img {
-
+margin-top: 10px;
     width: 100%;
     height: 100%;
 }
+@media (max-width:900px){
+    #cv{
+        width: 50%;
+        height: 100%;
+        left: 25%;
+        top: 0;
+    }
+}
 
+@media (max-width:900px){
+    #cv{
+        width: 60%;
+        height: 100%;
+        left: 20%;
+        top: 0;
+    }
+}
+@media (max-width:650px){
+    #cv{
+        width: 90%;
+        height: 100%;
+        left: 5%;
+        top: 0;
+    }
+}
+
+@media (max-width:500px){
+    #cv{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+}
 #index {
     margin-top: 130px;
     width: 100%;
@@ -511,6 +579,19 @@ header a {
         height: 390px;
         width: 400px;
     }
+    #index .container .text h2 {
+        /* margin-top: 50px; */
+    }
+
+    #index .container .text h3 {
+        /* margin-top: -20px; */
+
+    }
+
+    #index .container .text h4 {
+        margin-top: 30px;
+
+    }
 
     #index .container .image {
         margin: auto;
@@ -530,7 +611,7 @@ header a {
     }
 
     #index .container .text {
-        padding: 0 100px;
+        /* margin-left: 10%; */
         margin-top: 100px;
 
     }
