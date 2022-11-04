@@ -1,30 +1,46 @@
-var home = document.getElementById('home');
-var services = document.getElementById('services');
-var about = document.getElementById('about');
-var contact = document.getElementById('contact');
-var blog = document.getElementById('blog');
+var home = document.getElementsByClassName('home');
+var services = document.getElementsByClassName('services');
+var about = document.getElementsByClassName('about');
+var contact = document.getElementsByClassName('contact');
+var blog = document.getElementsByClassName('blog');
 var bar = document.getElementById('bar');
 var time = document.getElementById('time');
 var links = document.getElementById('links');
+var mycv = document.getElementById('cv');
+var resume = document.getElementById('resume');
+var closecv = document.getElementById('closecv');
+var blurs = document.getElementsByClassName('blur');
 
 
 
 
 
 
-window.onload = function(){
-    home.classList.add('after')
+
+
+
+
+// window.onload = function(){
+//     home.classList.add('after')
+// }
+resume.onclick = function () {
+    mycv.style.transform = "scale(1)";
+    // blurs.style.display = "block";
+
+}
+closecv.onclick = function () {
+    mycv.style.transform = "scale(0)";
 }
 
-bar.onclick = function(){
-    bar.style.transform="scale(0)";
-    time.style.transform="scale(1)";
+bar.onclick = function () {
+    bar.style.transform = "scale(0)";
+    time.style.transform = "scale(1)";
     links.style.transform = "scale(1)";
 
 }
-time.onclick = function(){
-    time.style.transform="scale(0)";
-    bar.style.transform="scale(1)";
+time.onclick = function () {
+    time.style.transform = "scale(0)";
+    bar.style.transform = "scale(1)";
     links.style.transform = "scale(0)";
 
 }
@@ -72,3 +88,32 @@ blog.onclick = function () {
     blog.classList.add('after');
 
 }
+
+
+
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    //  slidesPerView: 'auto',
+    loop: true,
+    spaceBetween: 30,
+    //  centeredSlides: true,
+
+    autoplay: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    }
+});
+
+
+
+
+
+
+
+
+AOS.init({
+    offset:200,
+    duration:500
+
+});  

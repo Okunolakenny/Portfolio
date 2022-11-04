@@ -1,7 +1,21 @@
-
-html{
+html {
     overflow-x: hidden;
-}.fixed {
+}
+
+* {
+    margin: 0;
+}
+
+.blur {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    z-index: 550;
+    display: none;
+}
+
+.fixed {
     display: block;
     position: fixed;
     left: 0;
@@ -135,6 +149,7 @@ header {
     top: 0;
     left: 0;
     align-items: center;
+    z-index: 500;
     justify-content: center;
     color: white;
 
@@ -171,10 +186,11 @@ header a {
     text-decoration: none;
     font-weight: thin;
     font-size: 22px;
+
 }
 
 .after {
-    box-shadow: 0 3px #046cef;
+    box-shadow: 0 3px white;
 }
 
 #bar,
@@ -185,7 +201,6 @@ header a {
     font-size: 20px;
     transform: scale(0);
     cursor: pointer;
-    z-index: 150;
 }
 
 @media (max-width:1200px) {
@@ -201,16 +216,14 @@ header a {
         transform: scale(0);
         cursor: pointer;
         transform: scale(1);
-        z-index: 150;
 
     }
 
     #time {
         transform: scale(0);
-        top: 115px;
+        top: 50px;
         left: 910px;
         font-size: 27px;
-        z-index: 150;
 
     }
 
@@ -232,10 +245,6 @@ header a {
     }
 }
 
-fa-bars,
-fa-times {
-    cursor: pointer;
-}
 
 
 @media (max-width:940px) {
@@ -249,17 +258,15 @@ fa-times {
 
     #bar {
         top: 40px;
-        left: 300px;
+        left: 500px;
         font-size: 27px;
-        z-index: 150;
 
     }
 
     #time {
         transform: scale(0);
-        top: 115px;
-        left: 640px;
-        z-index: 150;
+        top: 50px;
+        left: 740px;
 
         font-size: 27px;
     }
@@ -274,7 +281,7 @@ fa-times {
     header .container .links {
         display: block;
         top: 85px;
-        left: 306px;
+        left: 406px;
         position: fixed;
         transform: scale(0);
         transition: 2s;
@@ -296,7 +303,6 @@ fa-times {
         top: 80px;
         left: 300px;
         font-size: 23px;
-        z-index: 150;
 
     }
 
@@ -305,7 +311,6 @@ fa-times {
         top: 80px;
         left: 32px;
         font-size: 23px;
-        z-index: 150;
 
     }
 
@@ -343,7 +348,6 @@ fa-times {
     background: linear-gradient(to right, #84a9de, #046cef, #84a9de);
     transform: rotate(-5);
     border-radius: 50%;
-    z-index: -1;
     animation: 5s change infinite;
     animation-direction: reverse;
 
@@ -360,16 +364,41 @@ fa-times {
 
 }
 
+#cv {
+    height: 80vh;
+    position: fixed;
+    left: 35%;
+    z-index: 600;
+    top: 10%;
+    transform: scale(0);
+    transition: 2s;
+
+}
+
+#cv #closecv {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+
+}
+
+#cv img {
+
+    width: 100%;
+    height: 100%;
+}
+
 #index {
     margin-top: 130px;
     width: 100%;
     position: relative;
-    z-index: -200;
 }
 
 #index .container {
     display: flex;
     width: 90%;
+    position: relative;
     position: relative;
 
 }
@@ -379,33 +408,46 @@ fa-times {
     margin: auto;
     color: white;
     padding: 0 130px;
+    position: relative;
+    z-index: 200;
 
 
 }
 
 #index .container .text h4 {
-    font-size: 25px;
+    font-size: 30px;
+    margin-top: -100px;
 
 }
 
 #index .container .text h2 {
     font-size: 40px;
+    margin-top: 10px;
 
 }
 
 #index .container .text h3 {
     font-size: 25px;
+    margin-top: 10px;
+
+}
+
+#index .container .text h5 {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 
 }
 
 #index .container .text form {
-    border-radius: 20px;
+    border-radius: 10px;
     background: white;
-    width: 250px;
+    width: 265px;
     display: flex;
     overflow: hidden;
     justify-content: space-between;
     padding-left: 10px;
+    position: relative;
     height: 30px;
 
 }
@@ -419,8 +461,11 @@ fa-times {
 #index .container .text form input:last-of-type {
     background-color: #046cef;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
+    color: white;
     cursor: pointer;
+    padding-right: 5px;
+    font-weight: bolder;
 
 
 }
@@ -430,15 +475,36 @@ fa-times {
     margin: auto;
     height: 450px;
     position: relative;
-    z-index: -150;
 
 }
 
 #index .container .image img {
     width: 100%;
     height: 100%;
-    z-index: -150;
 }
+
+#index .container #resume,
+#index .container #more {
+    margin-top: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+    background-color: #046cef;
+    color: white;
+    height: 35px;
+    padding: 0 15px;
+    border: 1px solid white;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+#index .container #resume:hover,
+#index .container #more:hover {
+    background-color: white;
+    color: #046cef;
+}
+
 
 @media (max-width:1100px) {
     .pass {
@@ -465,19 +531,21 @@ fa-times {
 
     #index .container .text {
         padding: 0 100px;
+        margin-top: 100px;
+
     }
 
     #index .container .text h2 {
-        margin-top: -30px;
+        /* margin-top: -30px; */
     }
 
     #index .container .text h3 {
-        margin-top: -20px;
+        /* margin-top: -20px; */
 
     }
 
     #index .container .text h5 {
-        margin-top: -15px;
+        /* margin-top: -15px; */
 
     }
 }
@@ -490,18 +558,18 @@ fa-times {
 
     #index .container .text h2 {
         font-size: 30px;
-        margin-top: -30px;
+        /* margin-top: -30px; */
     }
 
     #index .container .text h3 {
         font-size: 20px;
-        margin-top: -20px;
+        /* margin-top: -20px; */
 
     }
 
     #index .container .text h5 {
         font-size: 20px;
-        margin-top: -15px;
+        /* margin-top: -15px; */
 
     }
 
@@ -518,18 +586,28 @@ fa-times {
 
     #index .container .text h2 {
         font-size: 30px;
-        margin-top: -30px;
+        /* margin-top: -25px; */
     }
 
     #index .container .text h3 {
         font-size: 18px;
-        margin-top: -20px;
+        /* margin-top: -15px; */
 
     }
 
     #index .container .text h5 {
         font-size: 20px;
-        margin-top: -15px;
+        /* margin-top: -10px; */
 
+    }
+
+    #index .container .pass {
+        width: 350px;
+        height: 350px;
+    }
+
+    #index .container .image {
+        width: 300px;
+        height: 400px;
     }
 }
