@@ -118,11 +118,9 @@ skill.onclick = function () {
     skills.style.transform = "scale(1)"
     edus.style.transform = "scale(0)"
     exps.style.transform = "scale(0)"
-
-
-
-
 }
+
+
 edu.onclick = function () {
     edu.classList.add('active');
     skill.classList.remove('active');
@@ -131,9 +129,8 @@ edu.onclick = function () {
     exps.style.transform = "scale(0)"
     skills.style.transform = "scale(0)"
 
-
-
 }
+
 exp.onclick = function () {
     exp.classList.add('active');
     edu.classList.remove('active');
@@ -141,11 +138,8 @@ exp.onclick = function () {
     exps.style.transform = "scale(1)"
     edus.style.transform = "scale(0)"
     skills.style.transform = "scale(0)"
-    
-
-
-
 }
+
 var swiper = new Swiper('.swiper-container', {
     slidesPerView: 2,
     //  slidesPerView: 'auto',
@@ -169,7 +163,7 @@ var swiper = new Swiper('.swiper-container', {
 
 AOS.init({
     offset:50,
-    duration:300
+    duration:1000
 
 });  
 

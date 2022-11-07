@@ -1,11 +1,10 @@
 #about {
     width: 100%;
     align-items: center;
-    /* min-height: 600px; */
     position: relative;
-    height: fit-content;
     margin-top: 100px;
-    padding: 100px 0 100px 0;
+    
+    /* padding: 100px 0 100px 0; */
     background-color: white;
 
 }
@@ -71,17 +70,14 @@
 
     color: white;
     font-size: 18px;
-    /* text-align: center; */
-    /* font-size: 25px; */
 
 }
 
 
 
 #about .container .aboutme {
-    padding: 20px 40px;
+    padding: 50px 40px;
     margin-top: 0;
-    height: fit-content;
     position: relative;
 
 
@@ -90,6 +86,7 @@
 #about .container .aboutme h1 {
     font-size: 30px;
     text-align: center;
+
 
 }
 
@@ -123,15 +120,22 @@
     margin-right: 30px;
 
 }
+#about .see{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    background-color: white;
+
+}
+#about .see >div{
+    
+}
 
 #about #skills {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: white;
-    margin-top: 20px;
     left: 0;
-    /* background-color: green; */
     transition: 2s;
     /* transform: scale(0); */
     position: relative;
@@ -150,14 +154,13 @@
     line-height: 1.5em;
 }
 
-#edus {
-    margin-top:-330px;
+#about #edus {
     width: 100%;
-    /* height: 200px; */
     transform: scale(0);
-    position: relative;
+    position: absolute;
+    top: 0;
     left: 0;
-    background-color: white;
+    /* background-color: white; */
     transition: 2s;
 
 }
@@ -181,13 +184,12 @@
     font-size: 15px;
 }
 
-#exps {
-    /* width: 250px; */
-    position: relative;
-    margin-top: -250px;
-    /* background-color: yellow; */
+#about #exps {
+    position: absolute;
     transform: scale(0);
     transition: 2s;
+    top: 0;
+    left: 0;
 
 }
 
@@ -208,6 +210,12 @@
     text-align: left;
     line-height: 1.5em;
     font-size: 15px;
+}
+#about .see #exps ul{
+    margin-bottom: 20px;
+}
+#about .see #exps ul li{
+    line-height: 1.5em;
 }
 
 @media (max-width:1300px) {}
