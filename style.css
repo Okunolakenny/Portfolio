@@ -423,6 +423,10 @@ header a {
 }
 
 @media (max-width:700px) {
+    
+    .all2, .all3, .all5, .all9, .all6, .all8{
+        display: none;
+    }
     header {
         padding-bottom: 50px;
     }
@@ -649,7 +653,10 @@ header a {
 
 #index .container .text form input:first-of-type {
     background-color: #046cef;
+    color: white;
+    z-index: 1;
     border: none;
+    font-weight: bolder;
     outline: none;
 }
 
