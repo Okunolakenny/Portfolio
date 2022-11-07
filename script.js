@@ -11,6 +11,13 @@ var resume = document.getElementById('resume');
 var closecv = document.getElementById('closecv');
 var blurs = document.querySelector('#index');
 var header = document.querySelector('header');
+var skill = document.getElementById('skill');
+var skills = document.getElementById('skills');
+var edu = document.getElementById('edu');
+var edus = document.getElementById('edus');
+var exp = document.getElementById('exp');
+var exps = document.getElementById('exps');
+
 
 
 
@@ -26,7 +33,7 @@ var header = document.querySelector('header');
 //     home.classList.add('after')
 // }
 window.addEventListener('scroll', ()=>{
-    header.classList.toggle('active', window.scrollY >= 500);
+    header.classList.toggle('active', window.scrollY >= 1400);
 })
 resume.onclick = function () {
     mycv.style.transform = "scale(1)";
@@ -63,43 +70,82 @@ home.onclick = function () {
 }
 
 services.onclick = function () {
-    home.classList.remove('after');
-    services.classList.add('after');
-    about.classList.remove('after');
-    contact.classList.remove('after');
-    blog.classList.remove('after');
+    home.classList.remove('after-links');
+    services.classList.add('after-links');
+    about.classList.remove('after-links');
+    contact.classList.remove('after-links');
+    blog.classList.remove('after-links');
 
 }
 
 about.onclick = function () {
-    about.classList.add('after');
-    home.classList.remove('after');
-    services.classList.remove('after');
-    contact.classList.remove('after');
-    blog.classList.remove('after');
+    about.classList.add('after-links');
+    home.classList.remove('after-links');
+    services.classList.remove('after-links');
+    contact.classList.remove('after-links');
+    blog.classList.remove('after-links');
 
 }
 
 contact.onclick = function () {
-    contact.classList.add('after');
-    home.classList.remove('after');
-    services.classList.remove('after');
-    about.classList.remove('after');
-    blog.classList.remove('after');
+    contact.classList.add('after-links');
+    home.classList.remove('after-links');
+    services.classList.remove('after-lnks');
+    about.classList.remove('after-links');
+    blog.classList.remove('after-links');
 
 }
 
 blog.onclick = function () {
-    home.classList.remove('after');
-    services.classList.remove('after');
-    about.classList.remove('after');
-    contact.classList.remove('after');
-    blog.classList.add('after');
+    home.classList.remove('after-links');
+    services.classList.remove('after-links');
+    about.classList.remove('after-links');
+    contact.classList.remove('after-links');
+    blog.classList.add('after-links');
 
 }
 
+window.onload = function(){
+    skill.classList.add('active');
+    // skills.style.transform = "scale(1)"
+
+    
+}
+skill.onclick = function () {
+    skill.classList.add('active');
+    edu.classList.remove('active');
+    exp.classList.remove('active');
+    skills.style.transform = "scale(1)"
+    edus.style.transform = "scale(0)"
+    exps.style.transform = "scale(0)"
 
 
+
+
+}
+edu.onclick = function () {
+    edu.classList.add('active');
+    skill.classList.remove('active');
+    exp.classList.remove('active');
+    edus.style.transform = "scale(1)"
+    exps.style.transform = "scale(0)"
+    skills.style.transform = "scale(0)"
+
+
+
+}
+exp.onclick = function () {
+    exp.classList.add('active');
+    edu.classList.remove('active');
+    skill.classList.remove('active');
+    exps.style.transform = "scale(1)"
+    edus.style.transform = "scale(0)"
+    skills.style.transform = "scale(0)"
+    
+
+
+
+}
 var swiper = new Swiper('.swiper-container', {
     slidesPerView: 2,
     //  slidesPerView: 'auto',
@@ -122,7 +168,12 @@ var swiper = new Swiper('.swiper-container', {
 
 
 AOS.init({
-    offset:300,
-    duration:100
+    offset:50,
+    duration:300
 
 });  
+
+
+var year = new Date().getFullYear();
+
+document.querySelector('#footer-date').innerHTML = year;

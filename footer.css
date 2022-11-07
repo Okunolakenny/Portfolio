@@ -1,0 +1,29 @@
+footer{
+    width: 100%;
+    position: relative;
+    align-items: center;
+    background-color: #046cef;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    
+
+}
+footer .container{
+    width: 90%;
+    margin: auto;
+    
+}
+footer .container p{
+    color: white;
+    text-align: center;
+
+}
+span{
+    font-size: 20px;
+    font-weight: bolder;
+}
+hr{
+    color: white;
+    margin: 20px 0;
+}
