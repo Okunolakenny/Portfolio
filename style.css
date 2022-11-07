@@ -48,17 +48,67 @@ html {
     z-index: 102;
 }
 
-.all1{
+.all1 {
     position: fixed;
-    right: 0;
-    top:5%;
+    left: 0;
+    top: 5%;
     border-radius: 50%;
     opacity: 60%;
     z-index: -200;
 
 
 }
-.all2{
+
+.all2 {
+    position: fixed;
+    right: 40%;
+    top: 5%;
+    border-radius: 50%;
+    opacity: 60%;
+    z-index: -200;
+
+
+}
+
+.all3 {
+    position: fixed;
+    right: 0;
+    top: 5%;
+    border-radius: 50%;
+    opacity: 60%;
+    z-index: -200;
+}
+
+.all4 {
+    position: fixed;
+    left: 0;
+    top: 40%;
+    border-radius: 50%;
+    opacity: 60%;
+    z-index: -200;
+}
+
+.all5 {
+    position: fixed;
+    left: 40%;
+    top: 40%;
+    border-radius: 50%;
+    opacity: 60%;
+    z-index: -200;
+}
+
+.all6 {
+    position: fixed;
+    right: 0;
+    top:40%;
+    border-radius: 50%;
+    opacity: 60%;
+    z-index: -200;
+
+
+}
+
+.all7 {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -66,6 +116,27 @@ html {
     opacity: 60%;
     z-index: -200;
 }
+
+.all8 {
+    position: fixed;
+    left: 40%;
+    bottom: 0;
+    border-radius: 50%;
+    opacity: 60%;
+    z-index: -200;
+}
+
+.all9 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    opacity: 60%;
+    z-index: -200;
+
+
+}
+
 
 .one {
     position: fixed;
@@ -164,8 +235,11 @@ html {
 
 
 }
-@media (max-width:500px){
-    .five, .six{
+
+@media (max-width:500px) {
+
+    .five,
+    .six {
         display: none;
     }
 }
@@ -182,7 +256,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    /* background-color: #046cef; */
+    background-color: #046cef;
     align-items: center;
     z-index: 800;
     justify-content: center;
@@ -256,10 +330,11 @@ header a {
 }
 
 @media (max-width:1200px) {
-    header{
-        padding-bottom:35px;
+    header {
+        padding-bottom: 35px;
 
     }
+
     header .container .links {
         display: none;
     }
@@ -304,8 +379,7 @@ header a {
 
 
 @media (max-width:940px) {
-    header {
-    }
+    header {}
 
     header .container .links {
         display: none;
@@ -510,8 +584,10 @@ header a {
 }
 
 #index {
-    margin-top: 130px;
+    margin-top: 100px;
     width: 100%;
+    background-color: white;
+    padding: 50px 0;
     position: relative;
 }
 
@@ -519,14 +595,13 @@ header a {
     display: flex;
     width: 90%;
     position: relative;
-    position: relative;
 
 }
 
 #index .container .text {
     width: 400px;
     margin: auto;
-    color: white;
+    color: black;
     padding: 0 130px;
     position: relative;
     z-index: 200;
@@ -561,7 +636,7 @@ header a {
 
 #index .container .text form {
     border-radius: 10px;
-    background: white;
+    background: #046cef;
     width: 265px;
     display: flex;
     overflow: hidden;
@@ -573,16 +648,16 @@ header a {
 }
 
 #index .container .text form input:first-of-type {
-    background-color: none;
+    background-color: #046cef;
     border: none;
     outline: none;
 }
 
 #index .container .text form input:last-of-type {
-    background-color: #046cef;
-    border: none;
+    background-color: white;
+    border: 1px solid #046cef;
     border-radius: 10px;
-    color: white;
+    color: #046cef;
     cursor: pointer;
     padding-right: 5px;
     font-weight: bolder;
@@ -615,14 +690,15 @@ header a {
     border: 1px solid white;
     border-radius: 15px;
     font-weight: bold;
+    transition: 2s;
     font-size: 15px;
 
 }
 
 #index .container #resume:hover,
 #index .container #more:hover {
-    background-color: white;
-    color: #046cef;
+    background-color: #3999d5;
+    color: white;
 }
 
 
