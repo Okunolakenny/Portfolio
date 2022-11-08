@@ -14,3 +14,10 @@ time1.onclick = function () {
     bar1.style.transform = "scale(1)";
     links1.style.transform = "scale(0)"
 }
+
+
+AOS.init({
+    offset:50,
+    duration:1000
+
+});  
