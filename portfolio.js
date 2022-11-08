@@ -1,3 +1,4 @@
+let preloader = document.querySelector(".preloader");
 var bar1 = document.getElementById('bar1');
 var time1 = document.getElementById('time1');
 var links1 = document.getElementById('links1');
@@ -21,3 +22,17 @@ AOS.init({
     duration:1000
 
 });  
+
+// var load = document.getElementById("loading");
+// function loader() {
+//     load.style.display = "none";
+    
+// }
+
+window.addEventListener("load", function () {
+    preloader.style.display = "none";
+  });
+  
+  window.addEventListener("loadstart", function () {
+    preloader.style.display = "block";
+  });
