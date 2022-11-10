@@ -35,4 +35,8 @@ window.addEventListener("load", function () {
   
   window.addEventListener("loadstart", function () {
     preloader.style.display = "block";
+
   });
+  setTimeout(() => {
+    window.removeEventListener("loadstart")
+  }, 10000)

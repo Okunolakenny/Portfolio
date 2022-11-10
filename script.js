@@ -1,3 +1,4 @@
+let preloader = document.querySelector(".preloader");
 var home = document.getElementsByClassName('home');
 var services = document.getElementsByClassName('services');
 var about = document.getElementsByClassName('about');
@@ -29,10 +30,12 @@ var exps = document.getElementById('exps');
 
 
 
+
+
 // window.onload = function(){
 //     home.classList.add('after')
 // }
-window.addEventListener('scroll', ()=>{
+window.addEventListener('scroll', () => {
     header.classList.toggle('active', window.scrollY >= 1400);
 })
 resume.onclick = function () {
@@ -105,11 +108,11 @@ blog.onclick = function () {
 
 }
 
-window.onload = function(){
+window.onload = function () {
     skill.classList.add('active');
     // skills.style.transform = "scale(1)"
 
-    
+
 }
 skill.onclick = function () {
     skill.classList.add('active');
@@ -162,12 +165,26 @@ var swiper = new Swiper('.swiper-container', {
 
 
 AOS.init({
-    offset:50,
-    duration:1000
+    offset: 50,
+    duration: 1000
 
-});  
+});
 
 
 var year = new Date().getFullYear();
 
 document.querySelector('#footer-date').innerHTML = year;
+
+
+window.addEventListener("load", function () {
+    preloader.style.display = "none";
+});
+
+window.addEventListener("loadstart", function () {
+    preloader.style.display = "block";
+
+});
+setTimeout(() => {
+    window.removeEventListener("loadstart")
+}, 60000)
+

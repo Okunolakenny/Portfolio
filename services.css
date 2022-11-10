@@ -53,6 +53,7 @@
 
 #services .container>div:hover {
     background-color: white;
+    scale: 0.9;
     color: white;
     /* transform: scale(1); */
 }
